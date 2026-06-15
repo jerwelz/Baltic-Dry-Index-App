@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563eb;
+  --color-accent: #06b6d4;
+
+  --color-bg: #0f172a;
+  --color-card: #1e293b;
+  --color-border: #334155;
+
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+
+  --color-purp: #9333ea;
+  --color-pink: #bf40bf;
+}
+
+/* Trend arrow animation */
+.trend-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: transform 260ms ease, opacity 260ms ease;
+  transform-origin: center;
+  color: inherit;
+}
+
+.trend-arrow.up {
+  color: var(--color-success);
+}
+
+.trend-arrow.down {
+  color: var(--color-error);
+}
+
+.trend-arrow.animate {
+  animation: trend-pop 420ms ease;
+}
+
+@keyframes trend-pop {
+  0% { transform: translateY(0) scale(0.9); opacity: 0; }
+  50% { transform: translateY(-4px) scale(1.08); opacity: 1; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
