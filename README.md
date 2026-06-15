@@ -1,18 +1,76 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Baltic Dry Index Dashboard
 
-Currently, two official plugins are available:
+Ein interaktives React-Dashboard zur Visualisierung des **Baltic Dry Index (BDI)**.  
+Das Projekt lädt echte Statistikdaten über eine API, bereitet diese auf und stellt sie als interaktives Diagramm mit Kennzahlen dar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Projektidee
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Ziel des Projekts ist es, externe Statistikdaten abzurufen, zu verarbeiten und verständlich in einer Weboberfläche darzustellen.  
+Dafür werden Monatswerte des Baltic Dry Index geladen und in einem interaktiven Chart visualisiert.
 
-Note: This will impact Vite dev & build performances.
+Der Nutzer kann:
 
-## Expanding the ESLint configuration
+- den zeitlichen Verlauf des Baltic Dry Index betrachten
+- einzelne Monate auswählen
+- zwischen Datenpunkten navigieren
+- nach einem bestimmten Monat suchen
+- aktuelle, höchste und niedrigste Werte einsehen
+- monatliche Veränderungen anzeigen lassen
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Features
+
+- Abruf externer Daten über eine API
+- Verarbeitung und Umwandlung der API-Daten für die Darstellung
+- Interaktives Area Chart mit Recharts
+- Anzeige des aktuell ausgewählten Datenpunkts
+- Navigation durch die Datenpunkte
+- Suchfunktion nach Monat, z. B. `2024-01`
+- Anzeige von Statuswerten wie „Hoch“, „Mittel“ und „Niedrig“
+- Berechnung der monatlichen Veränderung
+- Übersicht mit aktuellem, höchstem und niedrigstem Wert
+- Loading- und Error-State beim Laden der Daten
+- Komponentenbasierte React-Struktur
+
+---
+
+## Technologien
+
+- React
+- JavaScript
+- Recharts
+- Tailwind CSS
+- Vite
+- CSS
+
+---
+
+## Projektstruktur
+
+```text
+src/
+├── components/
+│   ├── AreaChart.jsx
+│   ├── Background.jsx
+│   ├── Hero.jsx
+│   ├── Navbar.jsx
+│   └── StatsSection.jsx
+├── App.jsx
+├── App.css
+└── main.jsx
+```
+Mit diesem Projekt möchte ich zeigen, dass ich grundlegende Konzepte der Webentwicklung praktisch anwenden kann:
+
+- Arbeiten mit React-Komponenten
+- Nutzung von `useState` und `useEffect`
+- Abrufen externer Daten mit `fetch`
+- Fehlerbehandlung beim API-Aufruf
+- Verarbeitung von JSON-Daten
+- Darstellung von Daten in einem Diagramm
+- Aufbau einer übersichtlichen Benutzeroberfläche
+- Umsetzung interaktiver UI-Funktionen
