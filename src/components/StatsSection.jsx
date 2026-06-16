@@ -49,26 +49,28 @@ export default function StatsSection({ data }) {
     <section className="bg-white px-8 py-6">
       <h2 className="mb-4 text-2xl font-bold">Baltic Dry Index Overview</h2>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-        <div className="rounded-xl border p-4">
-          <p className="text-sm text-slate-500">Aktueller Wert</p>
-          <p className="text-2xl font-bold">
-            <AnimatedNumber value={latest.value} />
-          </p>
-        </div>
+      <div className="rounded-xl shadow-lg bg-gradient-to-br from-slate-50 to-white p-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div className="border-l-4 border-blue-500 pl-4">
+            <p className="text-sm text-slate-500">Aktueller Wert</p>
+            <p className="text-3xl font-bold text-slate-900">
+              <AnimatedNumber value={latest.value} />
+            </p>
+          </div>
 
-        <div className="rounded-xl border p-4">
-          <p className="text-sm text-slate-500">Höchster Wert</p>
-          <p className="text-2xl font-bold">
-            <AnimatedNumber value={highest} />
-          </p>
-        </div>
+          <div className="border-l-4 border-blue-500 pl-4">
+            <p className="text-sm text-slate-500">Höchster Wert</p>
+            <p className="text-3xl font-bold text-slate-900">
+              <AnimatedNumber value={highest} />
+            </p>
+          </div>
 
-        <div className="rounded-xl border p-4">
-          <p className="text-sm text-slate-500">Niedrigster Wert</p>
-          <p className="text-2xl font-bold">
-            <AnimatedNumber value={lowest} />
-          </p>
+          <div className="border-l-4 border-blue-500 pl-4">
+            <p className="text-sm text-slate-500">Niedrigster Wert</p>
+            <p className="text-3xl font-bold text-slate-900">
+              <AnimatedNumber value={lowest} />
+            </p>
+          </div>
         </div>
       </div>
     </section>

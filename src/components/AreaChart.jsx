@@ -132,8 +132,8 @@ export default function BalticDryChart({ data }) {
   }
 
   return (
-    <div className="grid w-full gap-4 rounded-xl border bg-white p-4 md:grid-cols-[2fr_1fr]">
-      <div className="h-[320px]">
+    <div className="grid w-full gap-4 rounded-xl shadow-lg bg-white p-4 md:grid-cols-[2fr_1fr] outline-none">
+      <div className="h-[320px] outline-none">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={data}
@@ -162,7 +162,7 @@ export default function BalticDryChart({ data }) {
         </ResponsiveContainer>
       </div>
 
-      <div className="rounded-xl border bg-slate-50 p-4">
+      <div className="rounded-xl bg-slate-50 p-4">
         <div className="flex flex-col gap-4">
           <div>
             <p className="text-sm text-slate-500">Ausgewählter Punkt</p>
@@ -184,7 +184,7 @@ export default function BalticDryChart({ data }) {
               </p>
             )}
 
-            <div className="rounded-xl border border-slate-200 bg-white p-3 mt-3">
+            <div className="rounded-xl shadow-lg bg-white p-3 mt-3">
               <p className="text-sm text-slate-500">Monatliche Veränderung</p>
               {previousSelectedPoint ? (
                 <div className="mt-2 flex items-center gap-2 text-2xl font-bold">
@@ -214,7 +214,7 @@ export default function BalticDryChart({ data }) {
             </div>
           </div>
 
-          <div className="space-y-3 rounded-xl border border-slate-200 bg-white p-4">
+          <div className="space-y-3 rounded-xl shadow-lg bg-white p-4">
             <p className="text-sm font-medium text-slate-600">Navigation</p>
 
             <form onSubmit={handleDateSearch} className="flex gap-2">
@@ -223,7 +223,7 @@ export default function BalticDryChart({ data }) {
                 placeholder="z.B. 2024-01"
                 value={searchDate}
                 onChange={(e) => setSearchDate(e.target.value)}
-                className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-purple-500 focus:outline-none"
+                className="flex-1 rounded-lg shadow px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 focus:outline-none"
               />
               <button
                 type="submit"
