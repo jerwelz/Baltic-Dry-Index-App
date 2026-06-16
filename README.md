@@ -7,6 +7,10 @@ Das Projekt lädt echte Statistikdaten über eine API, bereitet diese auf und st
 
 ---
 
+Live-Demo: https://balticdryindexapp.netlify.app/
+
+---
+
 ## Projektidee
 
 Ziel des Projekts ist es, externe Statistikdaten abzurufen, zu verarbeiten und verständlich in einer Weboberfläche darzustellen.  
